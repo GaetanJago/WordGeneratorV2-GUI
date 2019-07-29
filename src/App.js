@@ -9,6 +9,9 @@ import SecuredRoute from './SecuredRoute/SecuredRoute';
 import auth0Client from './Auth';
 import AdminDashboard from './pages/admin/dashboard';
 import AdminLanguages from './pages/admin/languages';
+import AdminCategories from './pages/admin/categories';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -48,6 +51,9 @@ class App extends Component {
                   checkingSession={this.state.checkingSession} />
         <SecuredRoute path='/admin/languages'
                   component={AdminLanguages}
+                  checkingSession={this.state.checkingSession} />
+        <SecuredRoute path='/admin/categories'
+                  component={AdminCategories}
                   checkingSession={this.state.checkingSession} />
       </div>
     );

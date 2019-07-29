@@ -11,7 +11,9 @@ function NavBar(props) {
   };
 
   return (
-    <nav className="navbar navbar-dark bg-primary fixed-top">
+
+    
+    <nav className="nav-bar navbar-dark fixed-top">
       <ul>
         <Link to="/">
           <li className="navbar-link navbar-left">
@@ -30,19 +32,18 @@ function NavBar(props) {
             </Link>
           )}
         />
-      </ul>
-
-      {
+        {
         !auth0Client.isAuthenticated() &&
-        <button className="btn btn-dark" onClick={auth0Client.signIn}>Sign In</button>
+        <li className="navbar-link navbar-right" onClick={auth0Client.signIn}>Connexion</li>
       }
       {
         auth0Client.isAuthenticated() &&
         <div>
-          <label className="mr-2 text-white">{auth0Client.getProfile().name}</label>
-          <button className="btn btn-dark" onClick={() => { signOut() }}>Sign Out</button>
+          <label className="navbar-right">{auth0Client.getProfile().name}</label>
+          <li className="navbar-link navbar-right" onClick={() => { signOut() }}>Déconnexion</li>
         </div>
       }
+      </ul>
     </nav>
   );
 }

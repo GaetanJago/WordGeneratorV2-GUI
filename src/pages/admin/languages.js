@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
-import LanguageList from '../../components/admin/LanguagesList';
+import LanguageList from '../../components/admin/language/LanguagesList';
 import { LanguageProvider, LanguageContext } from '../../contexts/LanguageContext';
 import { Redirect } from "react-router-dom";
 import Can from "../../components/utils/Can";
-import AddLanguage from '../../components/admin/AddLanguage';
+import AddLanguage from '../../components/admin/language/AddLanguage';
 import auth0Client from '../../Auth';
 
 function language() {

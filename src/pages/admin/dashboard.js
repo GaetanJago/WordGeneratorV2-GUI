@@ -17,6 +17,7 @@ function Dashboard() {
                 <h2>Admin Dashboard</h2>
                 <ul>
                   <Link to="/admin/languages"><li>Gestion des langues</li></Link>
+                  <Link to="/admin/categories"><li>Gestion des catégories</li></Link>
                 </ul>
               </div>
             )}

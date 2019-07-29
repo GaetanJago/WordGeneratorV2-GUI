@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import auth0Client from '../../Auth';
-import { LanguageContext } from '../../contexts/LanguageContext';
+import auth0Client from '../../../Auth';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 import axios from 'axios';
 
 function AddLanguage(props) {

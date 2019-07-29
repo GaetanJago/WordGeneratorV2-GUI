@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 
 import Language from './Language';
-import {LanguageContext} from '../../contexts/LanguageContext';
+import {LanguageContext} from '../../../contexts/LanguageContext';
 
 const LanguagesList = () => {
     const [languages, setLanguages] = useContext(LanguageContext)
